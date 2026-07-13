@@ -3,256 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
+<title>Happy Birthday ❤️</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-body{
-    background:linear-gradient(180deg,#ffe6f0,#ffd6e7,#fff0f6);
-}
-
-.page{
-    width:100%;
-    height:100vh;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:20px;
-}
-
-.active{
-    display:flex;
-}
-
-h1{
-    color:white;
-    margin-bottom:20px;
-}
-
-p{
-    color:white;
-    max-width:600px;
-    line-height:1.7;
-}
-
-.btn{
-    margin-top:25px;
-    padding:12px 30px;
-    border:none;
-    border-radius:30px;
-    background:white;
-    color:#ff5f8f;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-.envelope{
-    font-size:100px;
-    animation:bounce 1.5s infinite;
-}
-
-@keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-}
-
-.gallery{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.gallery img{
-    width:200px;
-    height:250px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.2);
-}
-
-.heart{
-    position:absolute;
-    color:white;
-    animation:float 5s linear infinite;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
-}
-    .paper{
-    background:#fffdf8;
-    width:90%;
-    max-width:700px;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-    background-image:repeating-linear-gradient(
-        white,
-        white 30px,
-        #f4dede 31px
-    );
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div style="position:fixed;top:15px;left:20px;font-size:35px;">🌸</div>
 
-<div style="position:fixed;top:70px;right:25px;font-size:30px;">🤍</div>
+<div id="hearts"></div>
 
-<div style="position:fixed;bottom:30px;left:30px;font-size:30px;">✨</div>
+<!-- ================= HALAMAN 1 ================= -->
 
-<div style="position:fixed;bottom:80px;right:30px;font-size:35px;">🌷</div>
+<section class="page active" id="page1">
 
-<!-- HALAMAN 1 -->
-<div class="page active" id="page1">
-    <div class="envelope">💌</div>
-    <h1>Hai Kamu ❤️</h1>
-    <button class="btn" onclick="nextPage(2)">
-        Buka Surat
-    </button>
+<div class="envelope">
+
+<div class="letter-icon">
+💌
 </div>
 
-<!-- HALAMAN 2 -->
-<div class="page" id="page2">
+<h1>
+A Letter For
+<br>
+My Favorite Person ❤️
+</h1>
+
+<p>
+Klik surat ini ya sayang...
+</p>
+
+<button onclick="nextPage(2)">
+Open Letter 💌
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= HALAMAN 2 ================= -->
+
+<section class="page" id="page2">
+
 <div class="paper">
 
-<p style="text-align:right;color:#777;font-style:italic;">
+<div class="flower left">🌸</div>
+<div class="flower right">🌸</div>
+
+<p class="date">
 13 Juli 2026
 </p>
 
-<p style="font-size:18px;">
-Untuk seseorang yang paling spesial di hatiku,
-</p>
-
-<h1 style="color:#d6336c;text-align:center;">
-Happy Birthday ❤️
-</h1>
-
-<h2 style="color:#ff4d6d;text-align:center;">
-Aditya Fauzi Rahmawan
+<h2>
+Happy Birthday
 </h2>
 
-<p style="text-align:justify;line-height:2;color:#555;">
+<h1 class="name">
+Aditya Fauzi Rahmawan ❤️
+</h1>
 
-Hai sayangku...
+<div class="letter">
 
-Sebelumnya, aku mau mengucapkan selamat ulang tahun yang ke-23 untuk laki-laki hebat yang paling aku sayangi. 🤍
+<p>
 
-Mungkin ini bukan hadiah yang paling mahal atau paling sempurna, tapi aku membuat surat kecil ini dengan penuh rasa sayang. Aku ingin saat kamu membukanya, kamu tahu kalau ada seseorang yang selalu memikirkanmu, mendoakanmu, dan berharap kamu selalu bahagia.
+Hai sayangkuu...
 
-Terima kasih sudah hadir di hidupku. Terima kasih sudah menjadi tempatku bercerita, tempatku pulang, dan orang yang selalu berhasil membuatku tersenyum meskipun hari terasa berat.
+Selamat ulang tahun yang ke-23 yaa. 🤍
 
-Aku bangga dengan semua perjuanganmu sampai hari ini. Aku tahu kamu sudah melewati banyak hal untuk bisa berada di titik sekarang, dan aku percaya kamu akan menjadi pribadi yang lebih hebat lagi di masa depan.
+Hari ini adalah hari yang sangat spesial karena Allah masih memberikanmu kesempatan untuk bertambah usia dan terus menjadi pribadi yang lebih hebat.
 
-Semoga di usia yang baru ini Allah SWT selalu menjaga setiap langkahmu, memberikan kesehatan, umur yang penuh keberkahan, rezeki yang melimpah, serta mengabulkan semua doa dan cita-citamu.
+Website kecil ini memang sederhana, tetapi setiap kata yang ada di dalamnya aku tulis dengan penuh rasa sayang.
 
-Aku berharap suatu hari nanti kita masih bisa merayakan ulang tahunmu bersama, dengan senyum yang sama seperti hari ini.
+Aku ingin kamu tahu...
 
-Terima kasih sudah menjadi rumah yang paling nyaman untuk hatiku.
+Terima kasih sudah hadir di hidupku.
 
-Happy Birthday, my favorite person.
+Terima kasih sudah menjadi tempatku pulang.
 
-I love you more than words can ever explain. ❤️
+Terima kasih sudah selalu berusaha menjadi laki-laki yang kuat.
+
+Aku bangga memiliki kamu.
+
+Semoga Allah selalu menjaga langkahmu...
+
+Memberikan kesehatan...
+
+Rezeki yang berkah...
+
+Mengabulkan semua cita-citamu...
+
+Dan semoga suatu hari nanti...
+
+Aku masih menjadi orang yang menemanimu merayakan ulang tahunmu.
+
+Happy Birthday My Favorite Person.
+
+I Love You Forever ❤️
 
 </p>
 
-<p style="text-align:right;margin-top:35px;">
-Dengan penuh cinta,<br>
+</div>
+
+<div class="signature">
+
+Dengan penuh cinta,
+
 <b>Fanida 🤍</b>
+
+</div>
+
+<button onclick="nextPage(3)">
+Kenangan Kita 📸
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= HALAMAN 3 ================= -->
+
+<section class="page" id="page3">
+
+<h1 class="title">
+Our Memories ❤️
+</h1>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="foto1.jpg">
+</div>
+
+<div class="photo rotate">
+<img src="foto2.jpg">
+</div>
+
+<div class="photo">
+<img src="foto3.jpg">
+</div>
+
+</div>
+
+<button onclick="nextPage(4)">
+Next ❤️
+</button>
+
+</section>
+
+<!-- ================= HALAMAN 4 ================= -->
+
+<section class="page photo-bg" id="page4">
+
+<div class="overlay">
+
+<h1>
+Untuk Kamu...
+</h1>
+
+<p class="love-text">
+
+Kalau suatu hari nanti kamu merasa lelah...
+
+Istirahatlah.
+
+Kalau suatu hari nanti kamu merasa sendirian...
+
+Ingatlah kalau akan selalu ada aku yang mendoakanmu.
+
+Terima kasih sudah hadir di hidupku.
+
+Aku bangga memiliki kamu.
+
+Aku akan selalu mendukung semua impianmu.
+
+Semoga kita selalu dipertemukan dalam banyak kebahagiaan.
+
+I Love You ❤️
+
 </p>
 
-    <button class="btn" onclick="nextPage(3)">
-📸 Lihat Kenangan Kita
-    </button>
-    
-</div>
-</div>
+<button onclick="nextPage(5);playMusic()">
+Lanjut 🎂
+</button>
 
-<!-- HALAMAN 3 -->
-<div class="page" id="page3">
-    <h1>Kenangan Kita 📸</h1>
-
-    <div class="gallery">
-        <img src="foto1.jpg">
-        <img src="foto2.jpg">
-        <img src="foto3.jpg">
-    </div>
-
-    <button class="btn" onclick="nextPage(4)">
-        Next ➜
-    </button>
 </div>
 
-<!-- HALAMAN 4 -->
-<div class="page" id="page4">
-    <h1>I Love You ❤️</h1>
+</section>
 
-    <p>
-        Semoga apa pun yang sedang kamu perjuangkan
-        saat ini dapat berjalan dengan lancar.
-        Tetap semangat dan jangan lupa bahagia.
-    </p>
+<!-- ================= HALAMAN 5 ================= -->
 
-    <button class="btn" onclick="playMusic()">
-        Putar Musik 🎵
-    </button>
+<section class="page" id="page5">
+
+<h1>
+🎂 Happy Birthday 🎂
+</h1>
+
+<div class="cake">
+
+<div class="candle">
+<div class="fire"></div>
 </div>
 
-<audio id="music">
-    <source src="lagu.mp3" type="audio/mpeg">
+<div class="cake-body"></div>
+
+</div>
+
+<div class="pray">
+
+Ya Allah...
+
+Jagalah laki-laki yang sangat aku sayangi ini.
+
+Berikan kesehatan...
+
+Umur yang penuh keberkahan...
+
+Rezeki yang halal...
+
+Mudahkan segala urusannya...
+
+Kabulkan semua doa dan cita-citanya...
+
+Jika Engkau mengizinkan...
+
+Semoga suatu hari nanti kami bisa menua bersama dalam ikatan yang Engkau ridai.
+
+Aamiin Ya Rabbal Alamin 🤍
+
+</div>
+
+<h2>
+Happy Birthday
+<br>
+Aditya Fauzi Rahmawan ❤️
+</h2>
+
+</section>
+
+<audio id="music" loop>
+
+<source src="lagu.mp3" type="audio/mpeg">
+
 </audio>
 
-<script>
-function nextPage(page){
-    document.querySelectorAll('.page')
-    .forEach(p=>p.classList.remove('active'));
+<script src="script.js"></script>
 
-    document.getElementById('page'+page)
-    .classList.add('active');
-}
-
-function playMusic(){
-    document.getElementById('music').play();
-}
-
-function createHeart(){
-    const heart=document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML="❤️";
-
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*25+15)+"px";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },5000);
-}
-
-setInterval(createHeart,300);
-</script>
-    
 </body>
 </html>
+
