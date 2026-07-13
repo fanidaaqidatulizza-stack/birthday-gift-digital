@@ -249,14 +249,11 @@ button:hover{
 /* ================= HALAMAN FOTO + MUSIK ================= */
 
 .photo-bg{
-
-    background-image:url("foto1.jpg");
-
+    background-image:url("IMG-20260423-WA0004.jpg");
     background-size:cover;
-
     background-position:center;
-
 }
+
 
 .overlay{
 
