@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    overflow:hidden;
+}
+
+.page{
+    width:100%;
+    height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.active{
+    display:flex;
+}
+
+h1{
+    color:white;
+    margin-bottom:20px;
+}
+
+p{
+    color:white;
+    max-width:600px;
+    line-height:1.7;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff5f8f;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.envelope{
+    font-size:100px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.gallery{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery img{
+    width:200px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HALAMAN 1 -->
+<div class="page active" id="page1">
+    <div class="envelope">💌</div>
+    <h1>Hai Kamu ❤️</h1>
+    <button class="btn" onclick="nextPage(2)">
+        Buka Surat
+    </button>
+</div>
+
+<!-- HALAMAN 2 -->
+<div class="page" id="page2">
+    <h1>Untukmu ✨</h1>
+
+    <p>
+        Terima kasih sudah hadir dan menjadi bagian dari
+        cerita yang indah. Semoga hari-harimu selalu
+        dipenuhi kebahagiaan, kesehatan, dan banyak hal
+        baik yang datang tanpa henti.
+    </p>
+
+    <button class="btn" onclick="nextPage(3)">
+        Next ➜
+    </button>
+</div>
+
+<!-- HALAMAN 3 -->
+<div class="page" id="page3">
+    <h1>Kenangan Kita 📸</h1>
+
+    <div class="gallery">
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+    </div>
+
+    <button class="btn" onclick="nextPage(4)">
+        Next ➜
+    </button>
+</div>
+
+<!-- HALAMAN 4 -->
+<div class="page" id="page4">
+    <h1>I Love You ❤️</h1>
+
+    <p>
+        Semoga apa pun yang sedang kamu perjuangkan
+        saat ini dapat berjalan dengan lancar.
+        Tetap semangat dan jangan lupa bahagia.
+    </p>
+
+    <button class="btn" onclick="playMusic()">
+        Putar Musik 🎵
+    </button>
+</div>
+
+<audio id="music">
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function nextPage(page){
+    document.querySelectorAll('.page')
+    .forEach(p=>p.classList.remove('active'));
+
+    document.getElementById('page'+page)
+    .classList.add('active');
+}
+
+function playMusic(){
+    document.getElementById('music').play();
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*25+15)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
