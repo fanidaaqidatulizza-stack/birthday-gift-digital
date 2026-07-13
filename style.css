@@ -485,3 +485,26 @@ button:hover{
     margin-top:20px;
     color:#ff4f87;
 }
+
+#page5{
+    background-image: url("3f933b39-c305-4c4e-8299-0afca0f19350.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#page5::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+}
+
+#page5>*{
+    position:relative;
+    z-index:2;
+}
