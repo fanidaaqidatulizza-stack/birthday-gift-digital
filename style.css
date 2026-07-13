@@ -486,25 +486,40 @@ button:hover{
     color:#ff4f87;
 }
 
+/* ================= HALAMAN 5 ================= */
+
 #page5{
-    background-image: url("3f933b39-c305-4c4e-8299-0afca0f19350.png");
+    background-image: url("background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
 }
 
 #page5::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.35);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); /* supaya tulisan tetap terbaca */
 }
 
-#page5>*{
-    position:relative;
-    z-index:2;
+#page5 h1,
+#page5 h2,
+#page5 .pray,
+#page5 .cake,
+#page5 .big-cake{
+    position: relative;
+    z-index: 2;
+}
+
+.pray{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.85);
+    padding:25px;
+    border-radius:20px;
+    line-height:2;
+    color:#444;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
